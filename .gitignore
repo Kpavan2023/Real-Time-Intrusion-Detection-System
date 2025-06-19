@@ -1,0 +1,28 @@
+# Python files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+venv/
+
+# Environment variables
+.env
+
+# Database files
+*.db
+
+# Node modules
+/frontend/node_modules/
+
+# Logs
+*.log
+
+__pycache__/
+*.pyc
+*.h5
+*.pkl
+*.zip
+*.txt
+.env
+myenv/
+node_modules/

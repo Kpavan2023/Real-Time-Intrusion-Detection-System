@@ -1,0 +1,107 @@
+/* Home Page Styles */
+.home-container {
+  text-align: center;
+  padding: 50px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease-in-out;
+}
+
+/* Dark Mode */
+.home-container.dark-mode {
+  background: linear-gradient(135deg, #1e1e2e, #3a3a5a);
+  color: white;
+}
+
+/* Bright Mode */
+.home-container.bright-mode {
+  background: linear-gradient(135deg, #f0f0f5, #d9e2ec);
+  color: black;
+}
+
+/* Header */
+.home-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.home-description {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  max-width: 700px;
+  opacity: 0.9;
+}
+
+/* Feature Section */
+.features {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.feature-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s;
+}
+
+.feature-card:hover {
+  transform: scale(1.05);
+}
+
+/* Buttons */
+.button-container {
+  margin-top: 30px;
+}
+
+.signup-button, .login-button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  margin: 10px;
+}
+
+.signup-button {
+  background: #ff6b6b;
+  color: white;
+}
+
+.signup-button:hover {
+  background: #ff4f4f;
+  transform: scale(1.05);
+}
+
+.login-button {
+  background: #48c774;
+  color: white;
+}
+
+.login-button:hover {
+  background: #36a563;
+  transform: scale(1.05);
+}
+
+/* Dark/Bright Mode Toggle */
+.toggle-mode {
+  margin-top: 20px;
+  background: none;
+  border: 2px solid white;
+  padding: 10px 20px;
+  cursor: pointer;
+  color: white;
+  transition: background 0.3s;
+  border-radius: 50px;
+}
+
+.toggle-mode:hover {
+  background: rgba(255, 255, 255, 0.2);
+}

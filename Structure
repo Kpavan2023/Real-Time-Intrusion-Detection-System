@@ -1,0 +1,45 @@
+📂 backend/
+│── app.py  # Main Flask app
+│── requirements.txt  # Required Python packages
+├── 📂 database/
+│   ├── db_connection.py  # Handles MySQL connection
+│   ├── models.py  # Defines database models (User, Alerts)
+├── 📂 auth/
+│   ├── signup.py  # User signup logic with OTP verification
+│   ├── login.py  # User login logic with JWT authentication
+├── 📂 model/
+│   ├── saved_models/
+│       ├── dnn_ids_model.h5  # Trained DNN Model
+│       ├── lgbm_ids_model.txt  # Trained LightGBM Model
+|   ├──inference.py
+├── 📂 snort/
+│   ├── snort_monitor.py  # Captures network traffic
+├── 📂 utils/
+│   ├── email_alerts.py  # Sends email alerts
+│   ├── sms_alerts.py  # Sends SMS alerts
+│── 📂 frontend/                 # Frontend (React) application
+│   ├── 📂 src/
+│   │   ├── 📂 components/         # UI components
+│   │   │   ├── LoginForm.js        # UI for login form
+│   │   │   ├── SignupForm.js       # UI for signup form with OTP verification
+│   │   │   ├── Dashboard.js        # Dashboard UI showing alerts
+│   │   │   ├── AlertList.js        # Displays real-time alerts
+│   │   │   ├── Navbar.js           # Navigation bar
+│   │   │   ├── Footer.js           # Footer
+│   │   │   ├── styles.css          # Custom styles for UI
+│   │   │   ├── index.css           # General styles
+│   │   ├── 📂 pages/              # Application pages
+│   │   │   ├── Home.js             # Home page
+│   │   │   ├── Login.js            # Login page
+│   │   │   ├── Signup.js           # Signup page
+│   │   │   ├── Dashboard.js        # User dashboard
+│   │   │   ├── Alerts.js           # Alerts page
+│   │   ├── 📂 services/           # API and authentication handling
+│   │   │   ├── api.js              # API handling
+│   │   │   ├── authService.js      # Auth service for login/signup
+│   │   │   ├── idsService.js       # IDS alert fetching
+│   │   ├── App.js                 # Manages routing
+│   │   ├── index.js               # Entry point for React frontend
+│   ├── package.json               # Frontend dependencies
+│── .gitignore                     # Ignore unnecessary files
+│── README.md                      # Project documentation

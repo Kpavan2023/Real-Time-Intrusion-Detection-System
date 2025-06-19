@@ -1,0 +1,18 @@
+Flask
+Flask-Cors
+mysql-connector-python
+tensorflow
+lightgbm
+scikit-learn
+pandas
+numpy
+twilio
+python-dotenv
+requests
+scapy
+bcrypt
+pyjwt
+joblib
+--upgrade certifi
+
+

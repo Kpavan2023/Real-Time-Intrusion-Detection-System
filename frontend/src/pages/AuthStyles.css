@@ -1,0 +1,51 @@
+.auth-container {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .auth-left {
+    flex: 1;
+    background: linear-gradient(to bottom right, #0062E6, #33AEFF);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+  }
+  
+  .brand {
+    text-align: center;
+    max-width: 300px;
+    margin: 0 1rem;
+  }
+  
+  .brand h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .tagline {
+    margin-bottom: 2rem;
+    line-height: 1.5;
+  }
+  
+  .auth-right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f9f9f9;
+  }
+  
+  .form-box {
+    background: #fff;
+    padding: 2rem 3rem;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+  }
+  

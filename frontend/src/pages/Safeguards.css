@@ -1,0 +1,47 @@
+.safeguards-container {
+    padding: 50px;
+    text-align: center;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .dark-mode {
+    background: #121212;
+    color: #fff;
+  }
+  
+  .bright-mode {
+    background: #f5f5f5;
+    color: #333;
+  }
+  
+  .toggle-mode {
+    background: #ff9800;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .toggle-mode:hover {
+    background: #e68900;
+  }
+  
+  .safeguard-list {
+    margin-top: 30px;
+  }
+  
+  .safeguard-item {
+    background: #333;
+    color: white;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 8px;
+    text-align: left;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .safeguard-item:hover {
+    transform: scale(1.05);
+  }
+  
