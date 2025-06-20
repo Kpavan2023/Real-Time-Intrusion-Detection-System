@@ -192,6 +192,6 @@ npm start
 
 ## 📜 License
 
-This project is developed for academic and learning purposes.\
-\ua9 2025 Pavan Kumar Kollipara
+This project is developed for academic and learning purposes.
+2024 - Pavan Kumar Kollipara
 
