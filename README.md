@@ -66,36 +66,40 @@ A real-time intrusion detection system that leverages Snort for packet sniffing 
 
 ```
 📂 Real-Time-IDS/
-👉 backend/
-    ├─ app.py
-    ├─ requirements.txt
-    ├─ database/
-    │   ├─ db_connection.py
-    │   └─ models.py
-    ├─ auth/
-    │   ├─ signup.py
-    │   └─ login.py
-    ├─ model/
-    │   ├─ inference.py
-    │   └─ saved_models/
-    │       ├─ dnn_ids_model.h5
-    │       └─ lgbm_ids_model.txt
-    ├─ snort/
-    │   └─ snort_monitor.py
-    └─ utils/
-        ├─ email_alerts.py
-        └─ sms_alerts.py
-
-👉 frontend/
-    ├─ src/
-    │   ├─ components/
-    │   ├─ pages/
-    │   ├─ services/
-    │   ├─ App.js
-    │   └─ index.js
-    ├─ package.json
-👉 .gitignore
-👉 README.md
+├── backend/
+│   ├── app.py
+│   ├── requirements.txt
+│   ├── database/
+│   │   ├── db_connection.py
+│   │   └── models.py
+│   ├── auth/
+│   │   ├── signup.py
+│   │   └── login.py
+│   ├── model/
+│   │   ├── inference.py
+│   │   └── saved_models/
+│   │       ├── dnn_ids_model.h5
+│   │       └── lgbm_ids_model.txt
+│   ├── snort/
+│   │   └── snort_monitor.py
+│   └── utils/
+│       ├── email_alerts.py
+│       └── sms_alerts.py
+│
+├── frontend/
+│   ├── src/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── services/
+│   │   ├── App.js
+│   │   └── index.js
+│   ├── package.json
+│
+├── model_training/
+│   └── train_ids_models.ipynb   # Complete notebook for DNN & LightGBM training
+│
+├── .gitignore
+└── README.md
 ```
 
 ---
@@ -121,15 +125,24 @@ A real-time intrusion detection system that leverages Snort for packet sniffing 
 
 ## 🧠 Model Training
 
-- 🛁 Feature Selection: Top 20 features via RandomForest
-- ⚖️ SMOTE: Address class imbalance
-- 🧠 **DNN Model** (Keras + TensorFlow)
-  - Tuned with **Keras Tuner**
-  - Optimizer: Adam | Loss: Binary Crossentropy
-- 🚀 **LightGBM Model**
-  - Tuned using **Optuna**
-- Models are stored in **Google Drive** for reuse
-- Output includes classification label and risk score
+### 📁 `model_training/train_ids_models.ipynb` includes:
+- Full training pipeline for both **DNN** and **LightGBM**.
+- **Preprocessing** with label encoding, SMOTE for class balance, and feature selection using Random Forest.
+- **DNN Training** using Keras with Keras Tuner for hyperparameter optimization.
+- **LightGBM Training** using Optuna for hyperparameter tuning.
+- Saves models (`dnn_ids_model_1.h5`, `lgbm_ids_model_1.txt`) to Google Drive for use in backend.
+
+### ✅ Key Highlights:
+- Dataset: UNSW-NB15
+- Feature Selection: Top 20 via RandomForestClassifier
+- Balancing: SMOTE
+- DNN:
+  - Framework: TensorFlow/Keras
+  - Tuning: Keras Tuner
+  - Accuracy: **92.67%**
+- LightGBM:
+  - Tuning: Optuna
+  - Accuracy: **93.21%**
 
 ---
 
@@ -192,6 +205,8 @@ npm start
 
 ## 📜 License
 
-This project is developed for academic and learning purposes.
-2024 - Pavan Kumar Kollipara
+This project was developed by **Pavan Kumar Kollipara and team** for academic and educational purposes. 
+You are welcome to explore, learn from, and adapt the code for personal or academic use.  
+
+© 2025 Pavan Kumar Kollipara. All rights reserved.
 
